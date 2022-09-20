@@ -1,0 +1,11 @@
+{
+    "module_scope": "signup_form",
+    "fields": {
+        "email": {
+            "type": "input_text_element"
+        },
+        "name": {
+            "type": "input_text_element"
+        }
+    }
+}
