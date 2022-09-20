@@ -1,0 +1,19 @@
+id: validator
+dataslices:
+-
+    id: is_valid_email
+    typecode: bool
+action_reducers:
+-
+    id: validate_email
+    signature: callable<dispatch>(email string, return void)
+    comments:
+        - TODO
+        - Validate Email
+composers:
+-
+    id: validate
+    signature: callable(email string, return void)
+    comments:
+        - TODO
+        - Composer for email validation
