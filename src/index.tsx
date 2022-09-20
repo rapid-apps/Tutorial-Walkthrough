@@ -11,12 +11,20 @@ import { createBrowserHistory } from "history";
 import configStore from "./configStore";
 import reportWebVitals from './reportWebVitals';
 
+import {configure as signupFormConfigure} from './features/SignupForm/slice';
+import {configure as validatorConfigure} from './features/Validator/slice';
+
+import SignupContainerClient from './containers/signup/client';
+
 const history = createBrowserHistory();
 const initialState: any = {};
 
 const store = configStore(history, initialState);
 export type RootState = ReturnType<typeof store.getState>;
 
+
+signupFormConfigure(store);
+validatorConfigure(store);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -27,6 +35,7 @@ root.render(
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/client/signin" element={<SignupContainerClient />} />
         </Routes>
       </Provider>
     </React.StrictMode>
