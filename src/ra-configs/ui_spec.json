@@ -1,0 +1,47 @@
+{
+    "page": {
+        "id": "ui-001",
+        "ref_id": null,
+        "screen_id": "sc-01",
+        "parent_id": null,
+        "theme_ovveride": {},
+        "state_ids": ["dtw-01"],
+        "ia_objs": ["pg-01-01", "pg-01-03"],
+        "layout_obj": {
+            "height": "h-screen",
+            "background": "bg-blue",
+            "padding": "py-24 px-4"
+        },
+        "param_obj": {
+            "setName": "(name: string) => any",
+            "setUserId": "(email: string) => any",
+            "sendName": "() => any",
+            "signupUser": "() => any",
+            "handleKeyPress": "(e: string) => any",
+            "isEmailValid": "boolean"
+        }
+    },
+    "form": {
+        "id": "ui-002",
+        "ref_id": null,
+        "screen_id": "sc-01",
+        "parent_id": "ui-001",
+        "theme_ovveride": {},
+        "state_ids": ["dtw-02", "dtw-03", "dtw-04"],
+        "ia_objs": ["pg-01-02", "pg-01-12", "pg-01-06", "pg-01-10"],
+        "layout_obj": {
+            "width": "w-full",
+            "background": "bg-white",
+            "padding": "p-10",
+            "margin": "mt-16"
+        },
+        "param_obj": {
+            "setName": "(name: string) => any",
+            "setUserId": "(email: string) => any",
+            "sendName": "() => any",
+            "signupUser": "() => any",
+            "handleKeyPress": "(e: string) => any",
+            "isEmailValid": "boolean"
+        }
+    }
+}

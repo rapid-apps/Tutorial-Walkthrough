@@ -1,0 +1,81 @@
+{
+    "signup_block": {
+        "id": "pg-01-00",
+        "logo": {
+            "id": "pg-01-01",
+            "type": "ImmutableData",
+            "screen_id": "sc-01",
+            "source": "LocalConfig",
+            "lifecycle": "Fixed",
+            "parent_id": null
+        },
+        "title_info": {
+            "id": "pg-01-02",
+            "type": "FixedAttr",
+            "screen_id": "sc-01",
+            "source": "",
+            "lifecycle": "Fixed",
+            "parent_id": null
+        },
+        "form_block": {
+            "id": "pg-01-03",
+            "name_block": {
+                "id": "pg-01-12",
+                "name_label": {
+                    "id": "pg-01-04",
+                    "type": "FixedAttr",
+                    "screen_id": "sc-01",
+                    "source": "",
+                    "lifecycle": "Fixed",
+                    "parent_id": "pg-01-03"
+                },
+                "name_input": {
+                    "id": "pg-01-05",
+                    "type": "UserInput",
+                    "screen_id": "sc-01",
+                    "source": "User",
+                    "lifecycle": "OnUserInput",
+                    "parent_id": "pg-01-03"
+                }
+            },
+            "email_block": {
+                "id": "pg-01-06",
+                "email_label": {
+                    "id": "pg-01-07",
+                    "type": "FixedAttr",
+                    "screen_id": "sc-01",
+                    "source": "",
+                    "lifecycle": "Fixed",
+                    "parent_id": "pg-01-06"
+                },
+                "email_input": {
+                    "id": "pg-01-08",
+                    "type": "UserInput",
+                    "screen_id": "sc-01",
+                    "source": "User",
+                    "lifecycle": "OnUserInput",
+                    "parent_id": "pg-01-06"
+                },
+                "email_valid_status": {
+                    "id": "pg-01-09",
+                    "type": "Immutable",
+                    "screen_id": "sc-01",
+                    "source": "LocalConfig",
+                    "lifecycle": "Fixed",
+                    "parent_id": "pg-01-06"
+                }
+            },
+            "validate": {
+                "id": "pg-01-10",
+                "user_submit": {
+                    "id": "pg-01-11",
+                    "type": "UserAction",
+                    "screen_id": "sc-01",
+                    "source": "Backend",
+                    "lifecycle": "OnUserAction",
+                    "parent_id": "pg-01-10"
+                }
+            }
+        }
+    }
+}

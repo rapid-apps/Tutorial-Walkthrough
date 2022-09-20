@@ -1,0 +1,30 @@
+{
+    "State1": {
+        "id": "dtw-01",
+        "ia_objs": ["pg-01-00"],
+        "from_event": null,
+        "from states": null,
+        "to_events": ["OnUserInput", "OnUserAction"]
+    },
+    "State2": {
+        "id": "dtw-02",
+        "ia_objs": ["pg-01-05"],
+        "from_event": "OnUserInput",
+        "from states": ["dtw-01"],
+        "to_events": ["OnUserInput", "OnUserAction"]
+    },
+    "State3": {
+        "id": "dtw-03",
+        "ia_objs": ["pg-01-08", "pg-01-09"],
+        "from_event": "OnUserInput",
+        "from states": ["dtw-01"],
+        "to_events": ["OnUserInput", "OnUserAction"]
+    },
+    "State4": {
+        "id": "dtw-04",
+        "ia_objs": ["pg-01-10"],
+        "from_event": "OnUserAction",
+        "from states": ["dtw-02", "dtw-03"],
+        "to_events": ["OnUserInput", "OnUserAction"]
+    }
+}
