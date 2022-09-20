@@ -8,6 +8,10 @@ function validateEmailReducer(state: ValidatorTypes.ValidatorStateType, payload:
 	//TODO
 	//Validate Email
 	//start_2JJEY
+    var re = /\S+@\S+\.\S+/;
+    if (re.test(payload.email)) {
+        newState.isValidEmail = true;
+    }
 	//end_2JJEY
 	return newState
 }
@@ -52,6 +56,7 @@ export async function validate(email: string): Promise<void> {
 	//TODO
 	//Composer for email validation
 	//start_3D2DU
+    dispatch(validatorValidateEmail({email: email}));
 	//end_3D2DU
 }
 
